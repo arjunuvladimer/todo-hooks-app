@@ -2,20 +2,20 @@ const Todo = ({todo,index, updateTodo, deleteTodo}) => {
 
     return(
         <div 
-            style={{textDecoration: todo.hasCompleted? "line-through": "none"}}
+            style={{textDecoration: todo.hasComplete? "line-through": "none"}}
             className="todo"
             >
             {todo.text}
             <button 
                 className="btn"
-                onClick={() => updateTodo(index)}
+                onClick={() => updateTodo(todo._id)}
             >
             Completed
             </button>
             
             <button 
                 className="btn"
-                onClick={() => deleteTodo(index)}
+                onClick={() => deleteTodo(todo._id)}
             >
             Remove
             </button>
