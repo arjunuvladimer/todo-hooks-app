@@ -1,19 +1,30 @@
 import { useState } from "react";
+import ChildofTodoForm from "../ChildofTodoForm/ChildofTodoForm.component";
 
-// const props = {addTodo:() => {}}
-// const {addTodo} = props
+// function useState(value){
+//    constructor(value){
+//      this.state = value
+//    }
+// setState(value){
+//     this.state = value
+// }
+//    return [state,setState]
+//}
+// var a = 10
+// Array => [1,2,3,4] => [x,y,z]
+// obj => {fname:value,lname:value} =>{fname,lname} = obj
 
 const TodoForm = ({addTodo}) => {
     // From an empty string to it becomes => input => string
-  const [value, setValue] = useState("");
-
-  const handleSubmit = (event) => {
+  const [value, setValue] = useState(10);
+ 
+    const handleSubmit = (event) => {
     event.preventDefault()
     if(!value) return;
     // AddTodo Function is going to carry it to App Component
     addTodo(value)
     // Empty the String
-    setValue("")
+    setValue(11)
   }
   return (
     <div>
@@ -30,6 +41,7 @@ const TodoForm = ({addTodo}) => {
             />
             <button type="submit">Save</button>
         </form>
+        <ChildofTodoForm />
     </div>
     );
 };

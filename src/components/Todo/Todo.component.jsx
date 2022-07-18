@@ -1,3 +1,5 @@
+import ChildofTodo from "../ChildofTodo/ChildofTodo.component"
+
 const Todo = ({todo,index, updateTodo, deleteTodo}) => {
 
     return(
@@ -19,7 +21,7 @@ const Todo = ({todo,index, updateTodo, deleteTodo}) => {
             >
             Remove
             </button>
-            
+            <ChildofTodo anotherTodoChildProp = {todo}/>
         </div>
 
     )
